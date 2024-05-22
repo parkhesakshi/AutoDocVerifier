@@ -1,0 +1,10 @@
+step 1: Register yourself at AutoDocVerifier and get your documents
+                verified.
+
+step 2 : You will be able to login with your registered email and
+                password.
+
+step 3 : Go to "DocVerifier" and upload your documents.
+
+step 4 : After clicking on "Verify Now" button, you will be able to see
+                the verification status of your documents.

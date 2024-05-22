@@ -1,0 +1,9 @@
+@use "../../variables" as v;
+
+.view_doc_modal {
+  .modal-dialog {
+    max-width: 1000px;
+    min-width: 500px;
+    width: fit-content;
+  }
+}

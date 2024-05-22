@@ -1,0 +1,96 @@
+@use "../../variables" as v;
+
+.resetpassword_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+  width: 100%;
+  background-color: v.$bg-color;
+
+  .resetpassword_form_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 28rem;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: v.$white-color;
+    box-shadow: v.$shadow-color-primary 0px 0px 10px 0px;
+    .resetpassword_form_title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .resetpassword_form_subtitle {
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 20px;
+      text-align: center;
+      color: v.$text-color-grey;
+    }
+
+    .resetpassword_form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      .form-group {
+        width: 100%;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        label {
+          font-size: 1.2rem;
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+        input {
+          width: 100%;
+          height: 40px;
+          border: 1px solid v.$text-color-grey;
+          border-radius: 5px;
+          padding: 0 5px;
+          margin-bottom: 20px;
+          outline: none;
+          font-size: 1.2rem;
+        }
+
+        .password_visibility {
+          position: absolute;
+          right: 10px;
+          top: 60%;
+          transform: translateY(-50%);
+          cursor: pointer;
+          font-size: 1.2rem;
+          color: v.$text-color-grey;
+        }
+      }
+
+      .set_newpassword_btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 50px;
+        border: none;
+        border-radius: 5px;
+        background-color: v.$primary-color;
+        color: v.$white-color;
+        font-size: 1.2rem;
+        font-weight: 600;
+        cursor: pointer;
+        outline: none;
+      }
+    }
+  }
+}

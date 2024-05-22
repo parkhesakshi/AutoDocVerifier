@@ -1,0 +1,64 @@
+@use "./variables" as v;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900&display=swap");
+* {
+  font-family: "Ubuntu";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+p {
+  margin: 0;
+}
+
+body {
+  padding: 10px;
+  .admin_screen {
+    display: flex;
+    width: 100%;
+    min-height: 96vh;
+    max-height: 96vh;
+    background-color: v.$bg-color;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    // justify-content: flex-end;
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+
+      .admin_empty_screen {
+        display: none;
+      }
+    }
+    .admin_empty_screen {
+      flex-basis: 12%;
+    }
+
+    .admin_switch_screen {
+      flex-basis: 90%;
+      min-height: 100%;
+      max-height: 100%;
+      padding: 13px;
+      // margin: auto;
+      @media screen and (max-width: 900px) {
+        margin-top: 80px;
+      }
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d7d7d7;
+  border-radius: 10px;
+}

@@ -1,0 +1,37 @@
+version: "1.0"
+
+services:
+  dummy:
+    container_name: dummy
+    image: dummy
+    build:
+      context: ./dummy-server
+      dockerfile: dummyserver.dockerfile
+    ports:
+      - 4000:4000
+    environment:
+      - DATABASE_URL=mongodb+srv://sakshiparkhe:Sakshi1234@autodocverifier.pws19sr.mongodb.net/userdummydb?retryWrites=true&w=majority&appName=AutoDocVerifier
+      - PORT=4000
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  backend:
+    container_name: backend
+    image: backend
+    build:
+      context: ./server
+      dockerfile: server.dockerfile
+    depends_on:
+      - dummy
+    ports:
+      - 5000:5000
+    environment:
+      - DATABASE_URL=mongodb+srv://sakshiparkhe:Sakshi1234@autodocverifier.pws19sr.mongodb.net/autodocverifier?retryWrites=true&w=majority&appName=AutoDocVerifier
+      - PORT=5000
+      - TOKEN_SECRET=qBN9.2O>S+z)hf`38LT:eB&@0Y.!Ir|TJ7yqG6>yoq|33v|GiYw@uF^[CR6kF&>
+      - PDF_CO_API_KEY=sakshiparkhe56@gmail.com_obYkq4SDU2eZs196vrRWIFAl5q3Xc70F3RQQVA3GOd28GO65GGN2ob4sNk5MOj96
+      - DUMMY_SERVER_URL=http://172.25.112.1:4000
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+

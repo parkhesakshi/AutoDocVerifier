@@ -1,0 +1,58 @@
+@use "../../variables" as v;
+.ocrverifyModal {
+  .modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+      28deg,
+      rgba(23, 25, 27, 1) 0%,
+      rgba(25, 29, 41, 1) 59%,
+      rgba(15, 106, 96, 1) 82%
+    );
+    border-radius: 7px;
+    height: 270px;
+
+    .ocrverifyModal_container {
+      max-width: 600px;
+
+      .ocrverifyModal_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background-color: transparent !important;
+        border: none;
+        span {
+          color: v.$error-color;
+          font-size: 4rem;
+          font-weight: 600;
+          text-align: center;
+        }
+        p {
+          color: v.$white-color;
+          font-size: 1.2rem;
+          font-weight: 400;
+          text-align: center;
+          margin-top: 30px;
+
+          &.success {
+            color: v.$primary-color;
+          }
+
+          &.error {
+            color: v.$error-color;
+          }
+        }
+        .verify_btn {
+          padding: 10px 25px;
+          border-radius: 10px;
+          background-color: rgba($color: v.$white-color, $alpha: 0.3);
+          color: v.$white-color;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

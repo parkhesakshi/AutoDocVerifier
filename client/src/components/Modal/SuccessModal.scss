@@ -1,0 +1,36 @@
+@use "../../variables" as v;
+.modal-body {
+  .success_modal_body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100px;
+      height: 100px;
+    }
+    .success_message {
+      color: v.$primary-color;
+    }
+    p {
+      color: v.$secondary-color;
+    }
+  }
+}
+.modal-footer {
+  .continue_login_btn {
+    color: v.$primary-color;
+    font-weight: 400;
+    padding: 10px 20px;
+    border: 1px solid v.$primary-color;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: v.$primary-color;
+      color: v.$white-color;
+    }
+  }
+}

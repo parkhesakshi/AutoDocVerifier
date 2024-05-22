@@ -1,0 +1,65 @@
+@use "../../variables" as v;
+
+.viewstatus_modal {
+  & .modal-dialog {
+    height: fit-content;
+    .modal-content {
+      height: fit-content;
+      width: 100% !important;
+      background-color: v.$white-color !important;
+
+      .modal-body {
+        .viewstatus_container {
+          display: flex;
+          flex-direction: column-reverse;
+          width: 100%;
+          height: 100%;
+          padding: 10px;
+          align-items: center;
+          .viewstatus_content {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 70%;
+            width: 100%;
+
+            .viewstatus_content_item {
+              display: flex;
+              align-items: center;
+
+              .viewstatus_content_item_title {
+                flex-basis: 40%;
+                font-size: 1rem;
+                margin-right: 5px;
+                font-weight: 500;
+              }
+
+              span {
+                flex-basis: 10%;
+                font-size: 1rem;
+                margin: 5px;
+              }
+
+              .viewstatus_content_item_value {
+                flex-basis: 40%;
+                font-size: 1rem;
+              }
+            }
+          }
+
+          .viewstatus_gif {
+            flex-basis: 30%;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+              width: 80px;
+              height: 80px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
